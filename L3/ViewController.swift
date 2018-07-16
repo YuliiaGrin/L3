@@ -18,17 +18,7 @@ class ViewController: UIViewController {
         
         print("Задача 0")
         //Вывести на экран наибольшее из двух чисел
-        let randomNumber1 = arc4random()%10000
-        let randomNumber2 = arc4random()%10000
-        if randomNumber1 > randomNumber2  {
-            print("Первое рандомное число больше \(randomNumber1) > \(randomNumber2)")
-        }
-        else if randomNumber1 < randomNumber2 {
-            print("Второе рандомное число больше \(randomNumber1) < \(randomNumber2)")
-        }
-        else {
-            print("Рандомные числа равны \(randomNumber1) = \(randomNumber2)")
-        }
+        largestNumbers(number1: 4537, number2: 896)
         
         print("Задача 1")
         //Вывести на экран квадрат и куб числа
@@ -56,6 +46,8 @@ class ViewController: UIViewController {
         
         print("Задача 3")
         //Подсчитать общее количество делителей числа и вывести их
+        let randomNumber1 = arc4random()%10000
+        let randomNumber2 = arc4random()%10000
         var deliteli = 0
         var sum = 0
         for i in 1..<randomNumber1 {
@@ -130,6 +122,18 @@ class ViewController: UIViewController {
             print("Число \(mainNumber) задом на перед", n1*10+n2)
         }
         
+    }
+    
+    func largestNumbers(number1: Int, number2: Int) {
+        if number1 > number2  {
+            print("Первое число больше \(number1) > \(number2)")
+        }
+        else if number1 < number2 {
+            print("Второе число больше \(number1) < \(number2)")
+        }
+        else {
+            print("Числа равны \(number1) = \(number2)")
+        }
     }
     
 }
